@@ -1,0 +1,8 @@
+class _GameScreenState extends State<GameScreen> {
+  int score = 0;
+
+  void _incrementScore() {
+    setState(() {
+      score++;
+    });
+  }
