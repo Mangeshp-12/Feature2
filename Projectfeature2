@@ -1,8 +1,17 @@
-class _GameScreenState extends State<GameScreen> {
-  int score = 0;
 
-  void _incrementScore() {
-    setState(() {
-      score++;
-    });
+class Scoreboard extends StatelessWidget {
+  final int score;
+
+  const Scoreboard({Key? key, required this.score}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text(
+        'Score: $score',
+        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      ),
+    );
   }
+}
